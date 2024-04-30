@@ -1,5 +1,5 @@
 {% set name = "eip712" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ApeWorX/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 146e619db589bd95098872ca64dc1f510dbb3382973323984469003c4af56465
+  sha256: e24b0335b11a9f7354a3c02bba0643db782eb122fafbf16327a872211fc2f118
 
 build:
   noarch: python
@@ -27,8 +27,8 @@ requirements:
   run:
     - python >=3.8.0
     - dataclassy >=0.8.2,<1
-    - eth-abi >=4.1.0,<5
-    - eth-account >=0.10.0,<0.11
+    - eth-abi >=5.1.0,<6
+    - eth-account >=0.10.0,<0.12
     - eth-hash
     - eth-typing >=3.3.0,<4
     - eth-utils >=2.1.0,<3
