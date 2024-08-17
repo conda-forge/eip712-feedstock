@@ -28,11 +28,11 @@ requirements:
     - python >=3.8.0
     - dataclassy >=0.8.2,<1
     - eth-abi >=5.1.0,<6
-    - eth-account >=0.10.0,<0.12
+    - eth-account >=0.12.1,<0.14
     - eth-hash
-    - eth-typing >=3.3.0,<4
-    - eth-utils >=2.1.0,<3
-    - hexbytes >=0.3.0,<1
+    - eth-typing >=4.1.0,<5
+    - eth-utils >=4.1.0,<5
+    - hexbytes >=1.2.0,<2
 
 test:
   imports:
