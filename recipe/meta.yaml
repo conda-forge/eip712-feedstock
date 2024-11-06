@@ -1,5 +1,5 @@
 {% set name = "eip712" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ApeWorX/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e24b0335b11a9f7354a3c02bba0643db782eb122fafbf16327a872211fc2f118
+  sha256: b89b11faf2e20f12084bbd7ede5b07b5759232709bb2ed7a956833c5b5bf726d
 
 build:
   noarch: python
