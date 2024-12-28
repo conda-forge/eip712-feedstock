@@ -12,20 +12,20 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv
-  number: 0
+  number: 1
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
 
 requirements:
   host:
-    - python >=3.8.0
+    - python {{ python_min }}
     - setuptools >=51.1.1
     - setuptools-scm
     - wheel
     - pip
   run:
-    - python >=3.8.0
+    - python >={{ python_min }}
     - dataclassy >=0.8.2,<1
     - eth-abi >=5.1.0,<6
     - eth-account >=0.10.0,<0.12
@@ -46,6 +46,7 @@ test:
     - hypothesis
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ApeWorX/eip712
