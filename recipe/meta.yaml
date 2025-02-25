@@ -28,7 +28,7 @@ requirements:
     - python >={{ python_min }}
     - dataclassy >=0.8.2,<1
     - eth-abi >=5.1.0,<6
-    - eth-account >=0.10.0,<0.12
+    - eth-account >=0.11.3,<0.14
     - eth-hash
     - eth-typing >=3.3.0,<4
     - eth-utils >=2.1.0,<3
