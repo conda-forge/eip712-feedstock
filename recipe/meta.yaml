@@ -1,5 +1,5 @@
 {% set name = "eip712" %}
-{% set version = "0.2.11" %}
+{% set version = "0.2.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/ApeWorX/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 949aa31d38911ed5b5cb31b43783ba5764c09a3d0a23bfee5e18259b550d1751
+  sha256: d78a0b4fa1b0bb952b6d2ef554d56c725f3cc5c92624795e5446f899a9d88e0f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv
-  number: 1
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
