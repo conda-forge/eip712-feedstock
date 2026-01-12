@@ -16,7 +16,6 @@ build:
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
-
 requirements:
   host:
     - python {{ python_min }}
@@ -28,9 +27,8 @@ requirements:
     - eth-account >=0.11.3,<0.14
     - eth-pydantic-types >=0.2.4,<0.3
     - eth-utils >=2.3.1,<6
-    - pydantic>=2,<3
+    - pydantic >=2,<3
     - python >={{ python_min }}
-   # - hexbytes >=0.3.1,<2
 
 test:
   imports:
