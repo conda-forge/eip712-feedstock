@@ -1,5 +1,5 @@
 {% set name = "eip712" %}
-{% set version = "0.2.14" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ApeWorX/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 07ba0b010785d9aca0a3b278e72320d778d418f84bd2adaac1e2242ce1628007
+  sha256: ca64cdfa306107989af073461bcee0e33da17f8d2bf53afd3a06ac31aefe64f8
 
 build:
   noarch: python
@@ -15,7 +15,6 @@ build:
   number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-
 
 requirements:
   host:
@@ -25,13 +24,11 @@ requirements:
     - wheel
     - pip
   run:
-    - python >={{ python_min }}
-    - dataclassy >=0.11.1,<1
-    - eth-abi >=5.1.0,<6
     - eth-account >=0.11.3,<0.14
-    - eth-typing >=3.5.2,<6
-    - eth-utils >=2.1.0,<6
-    - hexbytes >=0.3.1,<2
+    - eth-pydantic-types >=0.2.4,<0.3
+    - eth-utils >=2.3.1,<6
+    - pydantic >=2,<3
+    - python >={{ python_min }}
 
 test:
   imports:
